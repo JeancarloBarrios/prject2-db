@@ -1,0 +1,23 @@
+body {font-family: sans-serif; background-color:  font-size: 14px;}
+
+#navlist { padding: 3px 0px;
+border-bottom: 1px solid #778;
+ }
+
+ label{
+
+	font-size: 20px;
+	display: block;
+	width: 10000%;
+	
+} 
+
+#navlist li { list-style: none; display: inline; margin-left:10px;}
+
+#navlist li a { padding: 3px 1em;
+border: 1px solid #778; border-bottom: none;
+background: #DDE; text-decoration: none; }
+
+#navlist li a:link { color: #448; }
+#navlist li a:hover {color: #000; background: #AAE; border-color: #227; }
+#navlist li a#current { background: #AAE; }

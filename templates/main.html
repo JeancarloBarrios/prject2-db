@@ -1,0 +1,198 @@
+<html>
+<head>
+<title>Portal web - aprenderaprogramar.com</title> <meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="main.css">
+<SCRIPT language="javascript">
+
+          function addRow(tableID) {
+
+               var table = document.getElementById(tableID);
+
+ 
+
+               var rowCount = table.rows.length;
+
+               var row = table.insertRow(rowCount);
+
+
+ 
+
+               var cell1 = row.insertCell(0);
+
+               var element1 = document.createElement("input");
+
+               element1.type = "checkbox";
+
+               cell1.appendChild(element1);
+
+ 
+
+               var cell2 = row.insertCell(1);
+               var cell3 = row.insertCell(1);
+               var cell4 = row.insertCell(1);
+               var cell5 = row.insertCell(1);
+               var cell6 = row.insertCell(1);
+               var cell7 = row.insertCell(1);
+               var cell8 = row.insertCell(1);
+               var cell9 = row.insertCell(1);
+               var cell10 = row.insertCell(1);
+               var cell11 = row.insertCell(1);
+
+              var element2 = document.createElement("input");
+              var element3 = document.createElement("input");
+              var element4 = document.createElement("input");
+              var element5 = document.createElement("input");
+              var element6 = document.createElement("input");
+              var element7 = document.createElement("input");
+              var element8 = document.createElement("input");
+              var element9 = document.createElement("input");
+              var element10 = document.createElement("input");
+              var element11 = document.createElement("input");
+
+               element2.type = "text";
+               element3.type = "text";
+               element4.type = "text";
+               element5.type = "text";
+               element6.type = "text";
+               element7.type = "text";
+               element8.type = "text";
+               element9.type = "text";
+               element10.type = "text";
+               element11.type = "text";
+
+
+
+               cell2.appendChild(element2);
+               cell3.appendChild(element3);
+               cell4.appendChild(element4);
+               cell5.appendChild(element5);
+               cell6.appendChild(element6);
+               cell7.appendChild(element7);
+               cell8.appendChild(element8);
+               cell9.appendChild(element9);
+               cell10.appendChild(element10);
+               cell11.appendChild(element11);
+
+
+
+          }
+
+ 
+
+          function deleteRow(tableID) {
+
+               try {
+
+               var table = document.getElementById(tableID);
+
+               var rowCount = table.rows.length;
+
+ 
+
+               for(var i=0; i<rowCount; i++) {
+
+                    var row = table.rows[i];
+
+                    var chkbox = row.cells[0].childNodes[0];
+
+                    if(null != chkbox && true == chkbox.checked) {
+
+                         table.deleteRow(i);
+
+                         rowCount--;
+
+                         i--;
+
+                    }
+
+               }
+
+               }catch(e) {
+
+                    alert(e);
+
+               }
+
+          }
+
+ 
+
+     </SCRIPT>
+
+</head>
+<body>
+<div id="navcontainer">
+<ul id="navlist">
+
+<li><a href="index.html">Agregar Cliente</a></li>
+<li><a value="Delete Row" onclick="deleteRow('dataTable');" >Eliminar Cliete</a></li>
+<li><a href="index.html">Modificar Cliente</a></li>
+
+</div>
+
+
+     <INPUT type="button" value="Add Row" onclick="addRow('dataTable');" />
+
+ 
+
+     
+      <TABLE id="dataTable" width="350px" border="1">
+
+          <TR>
+
+               <TD><INPUT type="checkbox" NAME="chk"/></TD>
+
+
+               <TD> <INPUT  />Nombre </TD>
+
+               <TD> <INPUT  />Apellido</TD>
+
+               <TD> <INPUT  />Email </TD>
+
+               <TD> <INPUT  />Telefono </TD>
+               <TD> <INPUT />Fecha de Nacimiento </TD>
+
+               <TD> <INPUT  />Genero </TD>
+
+               <TD> <INPUT />Pais </TD>
+               
+               <TD> <INPUT  />Direccion </TD>
+               <TD> <INPUT />Compañis </TD>
+               
+               <TD> <INPUT />Ocupacion </TD>
+
+          </TR>
+
+     </TABLE>
+ 
+
+     <TABLE id="dataTable" width="350px" border="1">
+
+          <TR>
+
+               <TD><INPUT type="checkbox" NAME="chk"/></TD>
+
+
+               <TD> <INPUT type="text" /> </TD>
+
+               <TD> <INPUT type="text" /> </TD>
+
+               <TD> <INPUT type="text" /> </TD>
+
+               <TD> <INPUT type="text" /> </TD>
+               <TD> <INPUT type="text" /> </TD>
+
+               <TD> <INPUT type="text" /> </TD>
+
+               <TD> <INPUT type="text" /> </TD>
+               
+               <TD> <INPUT type="text" /> </TD>
+               <TD> <INPUT type="text" /> </TD>
+               
+               <TD> <INPUT type="text" /> </TD>
+
+          </TR>
+
+     </TABLE>
+</body>
+</html>

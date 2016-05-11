@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang= "en">
+<head>
+	<meta charset="UTF-8" 	>
+	<title> CRM </title>
+	<link rel="stylesheet" type="text/css" href="estilos.css">
+	<script language="php" src="upload1.php"></script> 
+	
+</head>
+<body>
+<form action="mailto:tu@direccion.es" method="post" enctype="text/plain">
+	<label for="nombre"> Nombre:  </label>
+	<input type="text" id="nombre" placeholder="Escribe su nombre" name="Nombre">
+
+	<label for="Apellido"> Apellido:  </label>
+	<input type="text" id="apellido" placeholder="Escribe su apellido" name="Apellido">
+
+	<label for="email"> Email:  </label>
+	<input type="email" id="email" placeholder="Escribe tu email" name="Email">
+
+	<label for="number"> Telefono:  </label>
+	<input type="number" id="number" placeholder="Escribe numero de telefono" name="Telefono">
+
+	<label for="edad"> Fecha de nacimiento:  </label>
+	<input type="date" name="Edad">
+
+	<label for="edad"> Genero:  </label>
+	
+
+
+	<input checked="checked" type="radio" name="Genero" id="rd1" value="Hombre"/>
+	<label for="rd1">Hombre</label><br/>
+	<input type="radio" name="Genero" id="rd2" value="Mujer"/>
+	<label for="rd2">Mujer</label><br/>
+
+
+	<label for="country">Pais:</label>
+	<select id="country" name="Pais">
+	<option> Elige un pais</option>
+	<option>Guatemala</option>
+	<option>Mexico</option>
+	<option>Eatados Unidos</option>
+	<option>Otro</option>
+	</select>
+
+	<label for="direccion"> Direccion:  </label>
+	<input type="text" id="direccion" placeholder="Escribe su direccion" name="Direccion">
+
+	<label for="compañia"> Compañia:  </label>
+	<input type="text" id="direccion" placeholder="Escribe el nombre de la compañia" name= "Compañia">
+
+	<label for="ocupacion">Ocupación:</label>
+	<select id="ocupacion" name="Ocupacion">
+	<option> Elige una ocupación</option>
+	<option>Gerente</option>
+	<option>Supervisor</option>
+	<option>Vendedor</option>
+	<option>Programador</option>
+	<option>Otro</option>
+	</select>
+		
+	
+	<input name="uploadedfile" type="file" />
+	<input type="submit" value="Subir archivo" / name=Archivo>
+	
+
+
+	<input type="submit" value="Enviar">
+
+
+
+
+
+</form>
+</body>
+</html>

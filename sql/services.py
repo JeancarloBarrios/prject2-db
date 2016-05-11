@@ -9,3 +9,10 @@ def _get_session():
         return 'error'
 
     return conn.cursor()
+
+
+def insert_client(name, param1, param2):
+    cur = _get_session()
+    query = ''
+    cur.execute("""%s""", querry)
+    cur.close()
