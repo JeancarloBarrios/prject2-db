@@ -16,6 +16,8 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 
+from cmr import views as cmrV
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'^welcome/', cmrV.index),
 ]
