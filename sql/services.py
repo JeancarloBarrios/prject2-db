@@ -3,7 +3,7 @@ import psycopg2
 
 def _get_session():
     try:
-        conn = psycopg2.connect("dbname='template1' user='dbuser' host='localhost' password='dbpass'")
+        conn = psycopg2.connect("dbname='CRM' user='root' host='localhost' password='root'")
     except:
         print "I am unable to connect to the database"
         return 'error'
@@ -18,7 +18,7 @@ def _insert_client(nombre, type, phone, url, email, addr, city, netvalue, client
 
 def _update_client(campos[], oldVals[], newVals[]):
     cur = _get_session()
-    for i in campos.length:
+    for i in campos[]:
         query= 'UPDATE Clientes SET '+campos[i]+'= '+newVals[i]+' WHERE '+campos[i]+' = '+oldVals[i]+';'
         cur.execute(query)
 
