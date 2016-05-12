@@ -1,7 +1,8 @@
+# Service to manage twiiter calls
 import tweepy
-
-
-
+from mongo import services as mg
+import json
+# Sets the wtitter session
 def _set_twitter_session():
     auth = tweepy.OAuthHandler(
         'N7ssfqpl967rfoz7Wc0utSS4A',
@@ -15,5 +16,12 @@ def _set_twitter_session():
     return api
 
 
-def save_tweet(tweet):
+def get_tweets(user):
     api = _set_twitter_session()
+    result = api.user_timeline(user)
+    array = []
+    for elem in result:
+        el = json.dumps(elem._json)
+        mg.insertItem('tweets', el)
+        array.append(el)
+    return array
