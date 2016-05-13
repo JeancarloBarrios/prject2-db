@@ -18,7 +18,12 @@ def insertItem(c, i):
     a = col.insert_one(json.loads(i))
     print a
 
-def getItmes(c):
+def getItems(c):
     col = get_collection(c)
     a = col.find()
     return a
+
+def getUserTweets(c, i):
+    col = get_collection(c)
+    tweets = col.find({'user.screen_name' : i})
+    return tweets
